@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-// الاتصال بقاعدة البيانات
-$conn = new mysqli("localhost", "root", "", "products_db2");
+// 1. استدعاء ملف اتصال قاعدة البيانات من المسار الجديد
+require_once __DIR__ . '/../config/db.php';
+
 
 // التحقق من الاتصال
 if ($conn->connect_error) {
